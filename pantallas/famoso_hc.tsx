@@ -2,31 +2,30 @@ import React, { useState } from "react";
 import { Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import Evaluacion from './Evaluacion';
 
-
-const PerfilVG = () => {
+const famoso_hc = () => {
   const [calificacion, setCalificacion] = useState(0);
   const handleCalificacionChange = (valor: number) => {
-      setCalificacion(valor);
+    setCalificacion(valor);
   };
   
   return (
     <SafeAreaView>
       <ScrollView contentContainerStyle={styles.svContenedor} contentInsetAdjustmentBehavior="automatic">
-        <Text style={styles.encabezado}>Victor Manuel Ramirez Escobar</Text>
-        <Image style={styles.fotoPerfil} source={require('../imagenes/foto.jpg')}/>
+        <Text style={styles.encabezado}>Henry Cavill</Text>
+        <Image style={styles.fotoPerfil} source={require('../imagenes/henry_cavill.jpeg')}/>
         {}
         <Evaluacion calificacion={calificacion} onCalificacionChange={handleCalificacionChange} />
         <View style={styles.Seccion}>
           <Text style={styles.seccionheader}>Lugar de Nacimiento:</Text>
-          <Text style={styles.seccionContent}>Honduras Tegucigalpa</Text>
+          <Text style={styles.seccionContent}>Jersey, Islas del Canal</Text>
         </View>
         <View style={styles.Seccion}>
           <Text style={styles.seccionheader}>Fecha de Nacimiento:</Text>
-          <Text style={styles.seccionContent}>6 de octubre del 2001</Text>
+          <Text style={styles.seccionContent}>5 de mayo de 1983</Text>
         </View>
         <View style={styles.Seccion}>
           <Text style={styles.seccionheader}>Pasatiempos:</Text>
-          <Text style={styles.seccionContent}>Jugar Videojuegos y gimnasio</Text>
+          <Text style={styles.seccionContent}>Actuar, hacer ejercicio</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -58,10 +57,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginStart: 5
   },
-  
 });
 
-export default PerfilVG;
-
-
-
+export default famoso_hc;
